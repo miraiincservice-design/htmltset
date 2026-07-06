@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HK Credible Market Research Co., Limited｜香港科德博市場研究股份有限公司</title>
-<link rel="preconnect" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Noto+Serif+SC:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Noto+Serif+SC:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy-950:#0A1626;
@@ -292,6 +292,84 @@
 
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- LANG PILL ---------- */
+  .lang-pill{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.05em;
+    border:1px solid var(--line); color:var(--ink-soft); background:none;
+    padding:7px 13px; border-radius:20px; cursor:pointer; display:flex; align-items:center; gap:6px;
+  }
+  .lang-pill:hover{border-color:var(--navy-900); color:var(--navy-900);}
+
+  /* ---------- HERO TAGLINE STRAPLINE ---------- */
+  .hero-strap{
+    font-family:var(--font-display); font-style:italic; font-weight:500;
+    font-size:17px; color:var(--gold-light); margin-bottom:16px;
+  }
+
+  /* ---------- PILLAR GRID (why choose us) ---------- */
+  .pillar-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:70px;}
+  @media(max-width:900px){ .pillar-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .pillar-grid{grid-template-columns:1fr;} }
+  .pillar-card{background:var(--paper); padding:30px 26px;}
+  .pillar-num{font-family:var(--font-mono); font-size:11px; color:var(--gold); letter-spacing:.08em; margin-bottom:14px;}
+  .pillar-card h3{font-size:17px; margin-bottom:10px; color:var(--navy-900);}
+  .pillar-card p{font-size:13px; color:var(--ink-soft); line-height:1.7;}
+
+  /* ---------- SERVICE DETAIL CARDS (5 services) ---------- */
+  .service-detail{
+    display:grid; grid-template-columns:260px 1fr; gap:40px;
+    padding:44px 0; border-bottom:1px solid var(--line);
+  }
+  .service-detail:first-of-type{padding-top:0;}
+  .service-detail:last-of-type{border-bottom:none;}
+  @media(max-width:760px){ .service-detail{grid-template-columns:1fr; gap:18px;} }
+  .sd-label{display:flex; flex-direction:column; gap:14px;}
+  .sd-mark{
+    width:44px; height:44px; border:1px solid var(--navy-900); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .sd-mark svg{width:20px; height:20px;}
+  .sd-label h3{font-size:22px; color:var(--navy-900);}
+  .sd-label .sd-tag{font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
+  .sd-body p.desc{font-size:14.5px; color:var(--ink-soft); margin-bottom:18px; max-width:640px;}
+  .sd-bullets{list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px;}
+  @media(max-width:560px){ .sd-bullets{grid-template-columns:1fr;} }
+  .sd-bullets li{font-size:13.5px; color:var(--navy-800); padding-left:16px; position:relative;}
+  .sd-bullets li::before{content:""; position:absolute; left:0; top:7px; width:6px; height:6px; border:1px solid var(--gold); border-radius:50%;}
+
+  /* ---------- CASES (placeholder, honest empty state) ---------- */
+  .case-empty{
+    border:1px dashed var(--line); border-radius:4px; padding:52px 40px; text-align:center;
+    background:var(--paper-dim);
+  }
+  .case-empty h3{font-size:19px; margin-bottom:12px;}
+  .case-empty p{color:var(--ink-soft); font-size:14px; max-width:480px; margin:0 auto 22px;}
+
+  /* ---------- CULTURE VALUES ---------- */
+  .value-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media(max-width:900px){ .value-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .value-grid{grid-template-columns:1fr;} }
+  .value-card{background:var(--paper); padding:30px 26px;}
+  .value-card .vc-head{display:flex; align-items:baseline; gap:10px; margin-bottom:12px;}
+  .value-card .vc-cn{font-family:var(--font-display); font-size:19px; font-weight:600; color:var(--navy-900);}
+  .value-card .vc-sub{font-family:var(--font-mono); font-size:11px; color:var(--gold); letter-spacing:.04em;}
+  .value-card p{font-size:13px; color:var(--ink-soft); line-height:1.75;}
+
+  .culture-vm{display:grid; grid-template-columns:1fr 1fr; gap:50px; margin-bottom:56px;}
+  @media(max-width:760px){ .culture-vm{grid-template-columns:1fr; gap:30px;} }
+  .culture-vm .vm-block h3{font-size:16px; color:var(--navy-900); margin-bottom:10px;}
+  .culture-vm .vm-block p{font-size:14.5px; color:var(--ink-soft);}
+
+  .commitment-block{
+    background:var(--navy-900); color:#fff; padding:50px 46px; border-radius:4px; margin-top:60px; position:relative; overflow:hidden;
+  }
+  .commitment-block::before{
+    content:""; position:absolute; bottom:-40px; left:-40px; width:180px; height:180px;
+    background:radial-gradient(circle, var(--gold) 0%, transparent 70%); opacity:.15;
+  }
+  .commitment-block h3{color:#fff; font-size:22px; margin-bottom:16px; position:relative; z-index:2;}
+  .commitment-block p{color:#C7CFDC; font-size:14.5px; max-width:680px; position:relative; z-index:2;}
 </style>
 </head>
 <body>
@@ -314,24 +392,28 @@
       </div>
     </div>
     <nav class="nav-links">
+      <a href="#hero">首页</a>
+      <a href="#services">产品服务</a>
+      <a href="#cases">合作案例</a>
+      <a href="#culture">企业文化</a>
       <a href="#about">关于我们</a>
-      <a href="#services">核心服务</a>
-      <a href="#methodology">研究方法</a>
-      <a href="#serve">服务对象</a>
-      <a href="#contact">联系我们</a>
     </nav>
-    <a class="nav-cta" href="#contact">CONTACT US</a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <button class="lang-pill" title="English version coming soon" onclick="alert('英文版本即将上线 / English version coming soon')">EN ｜ 中</button>
+      <a class="nav-cta" href="#contact">CONTACT US</a>
+    </div>
     <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="hero">
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">HONG KONG · INDEPENDENT RESEARCH FIRM</div>
       <h1>以独立研究，<br><em>锚定</em>可信的资本决策</h1>
-      <div class="hero-tagline">INDEPENDENT RESEARCH ｜ MARKET INTELLIGENCE ｜ VALUATION ADVISORY ｜ CAPITAL MARKETS RESEARCH</div>
-      <p class="lead">香港科德博市場研究股份有限公司（HK Credible Market Research Co., Limited）是一家总部位于香港的独立研究与咨询机构，服务全球客户的市场研究、行业分析、企业估值、财务分析及资本市场研究需求。</p>
+      <div class="hero-strap">让每一个判断，都有据可依</div>
+      <div class="hero-tagline">INDEPENDENT RESEARCH ANCHORS TRUSTWORTHY CAPITAL DECISIONS</div>
+      <p class="lead">香港科德博（HK Credible Market Research Co., Limited）是一家独立的市场研究机构，专注于提供深度的行业洞察和数据分析。研究覆盖几乎所有行业，从市场趋势到消费者行为，通过定制化的研究服务，帮助企业在激烈竞争中做出精准决策。</p>
       <div class="hero-actions">
         <a class="btn btn-gold" href="#services">查看核心服务</a>
         <a class="btn btn-outline" href="#contact">联系我们</a>
@@ -365,9 +447,9 @@
     <div class="reveal">
       <div class="eyebrow">ABOUT US</div>
       <h2>关于我们</h2>
-      <p>HK Credible Market Research Co., Limited（香港科德博市場研究股份有限公司）是一家立足香港、服务全球的独立研究与咨询机构，专注于市场研究、行业分析、企业估值、财务分析及资本市场研究。</p>
-      <p>公司致力于为上市公司、拟上市企业、投资银行、私募基金、风险投资机构、会计师事务所、律师事务所及跨国企业提供符合国际标准的独立研究服务，为企业融资、并购重组、国际化发展及资本市场运作提供专业支持。</p>
-      <p>我们的研究遵循独立、客观、严谨、可验证的原则，以公开信息、行业数据、企业调研及专业分析为基础，为客户提供具有参考价值的研究成果。</p>
+      <p>香港科德博市场研究股份有限公司（HK Credible Market Research Co., Limited）是一家立足香港、服务全球的独立研究与咨询机构，专注于市场研究、行业分析、企业估值、财务分析及资本市场研究。</p>
+      <p>科德博（Credible）致力于为上市公司、拟上市企业、投资银行、私募基金、风险投资机构、会计师事务所、律师事务所及跨国企业提供符合国际标准的独立研究服务，为企业融资、并购重组、国际化发展及资本市场运作提供专业支持。</p>
+      <p>我们的研究覆盖几乎所有行业，从市场趋势到消费者行为，通过定制化的研究服务，帮助企业在激烈竞争中做出精准决策。研究遵循独立、客观、严谨、可验证的原则，以公开信息、行业数据、企业调研及专业分析为基础，为客户提供具有参考价值的研究成果。</p>
       <div class="value-tags">
         <span class="value-tag">数据驱动</span>
         <span class="value-tag">国际化视角</span>
@@ -392,84 +474,140 @@
       </div>
     </div>
   </div>
+  <div class="wrap">
+    <div class="pillar-grid reveal">
+      <div class="pillar-card">
+        <div class="pillar-num">01 · 为什么选择我们</div>
+        <h3>独立客观</h3>
+        <p>科德博始终坚持独立、客观、公正的原则。除客户依法提供的资料外，研究团队综合公开信息、行业数据及自主分析形成研究结论，不受任何第三方的不当影响。一份研究报告的真正价值，不在于它是否"好听"，而在于它是否"真实"。</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02 · 为什么选择我们</div>
+        <h3>专业严谨</h3>
+        <p>采用国际通行的研究框架开展分析，从数据收集、市场验证、数据分析到专家审核，确保每一份报告的逻辑一致性、数据来源可追溯及分析过程完整——每一个结论都有支撑。</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03 · 为什么选择我们</div>
+        <h3>全行业覆盖</h3>
+        <p>从传统制造业到新兴科技产业，从消费市场到金融服务，均具备深厚的研究积累与项目经验，能够为客户提供跨行业、跨领域的综合研究支持。</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04 · 为什么选择我们</div>
+        <h3>全球视野</h3>
+        <p>总部位于香港——连接中国与世界的重要国际金融中心。我们以全球化视角理解市场、分析行业、判断趋势，帮助客户在复杂多变的全球市场中找到确定性的方向。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section-pad" id="services" style="border-top:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">CORE SERVICES</div>
-      <h2>核心服务</h2>
-      <p>覆盖市场研究、行业研究、企业估值、财务分析、资本市场研究与商业尽职调查，为客户在投资、上市、战略转型等不同阶段提供灵活定制的研究方案。</p>
+      <div class="eyebrow">OUR SERVICES</div>
+      <h2>我们的服务</h2>
+      <p>覆盖行业研究、企业估值、ESG 服务、商业尽调与募投可研，为客户在投资、上市、战略转型等不同阶段提供灵活定制的研究方案。</p>
+    </div>
+
+    <div class="reveal">
+      <div class="service-detail">
+        <div class="sd-label">
+          <div class="sd-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></div>
+          <h3>行业研究</h3>
+          <div class="sd-tag">Industry Research</div>
+        </div>
+        <div class="sd-body">
+          <p class="desc">对行业进行系统性分析，涵盖市场规模、增长趋势、驱动因素、竞争格局、产业链结构及未来发展方向，可广泛应用于投资决策、企业战略规划、IPO 招股书撰写及市场进入分析等场景。</p>
+          <ul class="sd-bullets">
+            <li>行业现状分析与市场规模预测</li>
+            <li>技术趋势演变与竞争格局研究</li>
+            <li>行业风险因素系统识别</li>
+            <li>全球可比企业对标分析</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="sd-label">
+          <div class="sd-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2" fill="#0F2038"/></svg></div>
+          <h3>企业估值</h3>
+          <div class="sd-tag">Business Valuation</div>
+        </div>
+        <div class="sd-body">
+          <p class="desc">作为财务顾问，为买方或卖方提供全行业、全生命周期的企业估值服务。通过对标的公司所处市场环境及竞争要素的深度分析，为交易定价提供严谨、多维度的专业支撑。</p>
+          <ul class="sd-bullets">
+            <li>企业整体估值 / 股权估值</li>
+            <li>IPO 估值分析 / 并购估值</li>
+            <li>品牌及无形资产估值</li>
+            <li>收益法 · 市场法 · 成本法 · DCF 等多元估值模型</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="sd-label">
+          <div class="sd-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M12 3C8 5 5 9 5 13a7 7 0 0014 0c0-4-3-8-7-10z"/><path d="M12 21V10"/></svg></div>
+          <h3>ESG 服务</h3>
+          <div class="sd-tag">ESG Advisory</div>
+        </div>
+        <div class="sd-body">
+          <p class="desc">根据企业可持续发展需求，提供 ESG（环境、社会及公司治理）报告编写服务，帮助客户向投资者、客户、员工、社区等利益相关方展现企业软实力，助力塑造负责任品牌形象。</p>
+          <ul class="sd-bullets">
+            <li>编制合规 ESG 报告及优化建议</li>
+            <li>辅助企业测算碳排放数据</li>
+            <li>协助数据检索、更新与存取管理</li>
+            <li>跟踪数据收集进度，按时完成报告交付</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="sd-label">
+          <div class="sd-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><circle cx="10" cy="10" r="6"/><line x1="15" y1="15" x2="20" y2="20" stroke-linecap="round"/></svg></div>
+          <h3>商业尽调</h3>
+          <div class="sd-tag">Commercial Due Diligence</div>
+        </div>
+        <div class="sd-body">
+          <p class="desc">在企业并购、投资、合作等重大商业决策中，投资人与标的公司达成初步意向后，对标的企业内外部环境及运营情况进行谨慎调查，全面评估其商业前景、内在价值及潜在风险。</p>
+          <ul class="sd-bullets">
+            <li>市场潜力与商业价值评估</li>
+            <li>客户分析与收入质量核查</li>
+            <li>上下游及供应链调研</li>
+            <li>企业核心竞争力与风险识别</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="sd-label">
+          <div class="sd-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M4 18l5-6 4 4 7-9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="7" r="1.6" fill="#0F2038"/></svg></div>
+          <h3>募投可研</h3>
+          <div class="sd-tag">Feasibility Study</div>
+        </div>
+        <div class="sd-body">
+          <p class="desc">作为独立第三方机构，基于精准调研数据与科学客观的研究方法撰写可研报告，提供准确、合理、真实、有效的行业信息与市场数据。通过分析发行人所在行业发展趋势、市场规模及技术走向，向投资者及监管部门客观描述市场发展空间与企业成长性。</p>
+          <ul class="sd-bullets">
+            <li>募投项目设计与方案优化</li>
+            <li>备案要点与审核合规指导</li>
+            <li>投入产出合理性论证</li>
+            <li>项目整体合理性与可行性优化</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="wrap" style="padding:0;">
-    <div class="service-grid reveal">
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg></div>
-        <h3>市场研究</h3>
-        <p class="desc">Market Research</p>
-        <ul>
-          <li>全球及区域市场规模分析</li>
-          <li>市场进入策略研究</li>
-          <li>消费者研究与竞争格局分析</li>
-          <li>市场机会与商业模式研究</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></div>
-        <h3>行业研究</h3>
-        <p class="desc">Industry Research</p>
-        <ul>
-          <li>行业现状、市场规模与增长预测</li>
-          <li>技术趋势与竞争分析</li>
-          <li>风险因素识别</li>
-          <li>全球可比企业分析</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2" fill="#0F2038"/></svg></div>
-        <h3>企业估值</h3>
-        <p class="desc">Business Valuation</p>
-        <ul>
-          <li>企业整体估值 / 股权估值</li>
-          <li>IPO 估值分析、并购估值</li>
-          <li>品牌及无形资产估值</li>
-          <li>收益法 · 市场法 · 成本法 · DCF</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M4 4v16h16M8 16l3-4 3 3 5-7"/></svg></div>
-        <h3>财务分析</h3>
-        <p class="desc">Financial Analysis</p>
-        <ul>
-          <li>财务健康与盈利能力分析</li>
-          <li>成本结构与营运效率分析</li>
-          <li>财务预测与现金流分析</li>
-          <li>风险分析</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><rect x="4" y="10" width="4" height="10"/><rect x="10" y="5" width="4" height="15"/><rect x="16" y="13" width="4" height="7"/></svg></div>
-        <h3>资本市场研究</h3>
-        <p class="desc">Capital Markets Research</p>
-        <ul>
-          <li>Nasdaq / NYSE 研究</li>
-          <li>香港、新加坡、日本资本市场研究</li>
-          <li>OTC 市场研究、SPAC 研究</li>
-          <li>PIPE 融资与同行业估值分析</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F2038" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></div>
-        <h3>商业尽职调查</h3>
-        <p class="desc">Commercial Due Diligence</p>
-        <ul>
-          <li>商业模式与行业尽调</li>
-          <li>客户分析与收入质量分析</li>
-          <li>供应链分析</li>
-          <li>企业竞争力分析</li>
-        </ul>
-      </div>
+</section>
+
+<section class="section-pad" id="cases" style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">CASE STUDIES</div>
+      <h2>合作案例</h2>
+      <p>我们与上市公司、拟上市企业及资本市场各参与方保持长期合作。</p>
+    </div>
+    <div class="case-empty reveal">
+      <h3>案例详情整理中</h3>
+      <p>基于客户保密要求，具体项目案例暂未在官网公开展示。如需了解我们过往的行业研究、估值或尽调项目经验，欢迎直接联系我们。</p>
+      <a class="btn btn-gold" href="#contact" style="color:#fff; background:var(--navy-900);">联系我们了解详情</a>
     </div>
   </div>
 </section>
@@ -499,24 +637,24 @@
     <div class="section-head reveal">
       <div class="eyebrow">RESEARCH METHODOLOGY</div>
       <h2>研究方法</h2>
-      <p>公司采用国际通行的研究框架开展分析，从数据收集、市场验证、数据分析到专家审核，确保每一份报告的逻辑一致性、数据来源可追溯及分析过程完整。</p>
+      <p>科德博采用国际通行的研究框架开展分析，从数据收集、市场验证、内部审核到数据分析，确保每一份报告的逻辑一致性、数据来源可追溯及分析过程完整。</p>
     </div>
     <div class="method-track reveal">
       <div class="method-step">
         <div class="method-num">01</div>
         <h3>数据收集</h3>
         <ul>
-          <li>政府公开统计数据</li>
-          <li>国际数据库</li>
-          <li>行业协会资料</li>
-          <li>企业公开披露文件与财务报告</li>
+          <li>行业研究数据库</li>
+          <li>自有模型数据库</li>
+          <li>用户行为数据库</li>
+          <li>全球公开数据</li>
         </ul>
       </div>
       <div class="method-step">
         <div class="method-num">02</div>
         <h3>市场验证</h3>
         <ul>
-          <li>企业访谈 · 专家访谈</li>
+          <li>企业专家访谈</li>
           <li>行业交叉验证</li>
           <li>上下游供应链调研</li>
           <li>市场抽样调查</li>
@@ -524,22 +662,22 @@
       </div>
       <div class="method-step">
         <div class="method-num">03</div>
-        <h3>数据分析</h3>
-        <ul>
-          <li>定量分析 · 定性分析</li>
-          <li>财务建模</li>
-          <li>市场预测</li>
-          <li>可比公司分析 · 情景分析</li>
-        </ul>
-      </div>
-      <div class="method-step">
-        <div class="method-num">04</div>
-        <h3>专家审核</h3>
+        <h3>内部审核</h3>
         <ul>
           <li>内部质量审核</li>
           <li>逻辑一致性核查</li>
           <li>数据来源可追溯</li>
           <li>分析过程完整性确认</li>
+        </ul>
+      </div>
+      <div class="method-step">
+        <div class="method-num">04</div>
+        <h3>数据分析</h3>
+        <ul>
+          <li>定量与定性分析</li>
+          <li>财务建模</li>
+          <li>市场预测</li>
+          <li>可比性公司分析</li>
         </ul>
       </div>
     </div>
@@ -548,8 +686,8 @@
 
 <section class="section-pad independence">
   <div class="wrap independence-inner reveal">
-    <div class="eyebrow" style="color:var(--gold-light);">STATEMENT OF INDEPENDENCE</div>
-    <h2>HK Credible Market Research Co., Limited 在开展研究工作时，坚持独立、客观、公正的原则。</h2>
+    <div class="eyebrow" style="color:var(--gold-light);">OUR COMMITMENT TO INDEPENDENCE</div>
+    <h2>我们的独立性承诺 — 科德博在开展研究工作时，坚持独立、客观、公正的原则。</h2>
     <p>除客户依法提供的资料外，研究团队综合公开信息、行业数据及自主分析形成研究结论，不受任何第三方的不当影响。</p>
     <p>除非报告中另有明确说明，本公司不保证任何预测一定实现。研究报告仅代表基于报告出具日期已知信息及合理假设形成的专业分析意见，不构成投资建议、证券推荐或收益保证。</p>
   </div>
@@ -579,26 +717,60 @@
   </div>
 </section>
 
-<section class="section-pad" style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap vv-grid">
-    <div class="vv-block reveal">
-      <div class="eyebrow">VISION &amp; MISSION</div>
-      <h3>企业愿景</h3>
-      <p>成为亚洲领先、具有国际影响力的独立研究机构，为全球企业及资本市场提供值得信赖的专业研究服务。</p>
-      <h3 style="margin-top:26px;">企业使命</h3>
-      <p>以独立研究支持企业决策，以专业分析促进资本市场健康发展。</p>
+<section class="section-pad" id="culture" style="background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">CORPORATE CULTURE</div>
+      <h2>以研究立身，以专业致远</h2>
+      <p>我们相信，独立的研究是资本市场健康运转的基石。科德博以诚信为本、以专业为尺，在每一项研究中践行我们的文化信条。</p>
     </div>
-    <div class="vv-block reveal">
-      <div class="eyebrow">CORE VALUES</div>
-      <h3>企业价值观</h3>
-      <ul class="values-list">
-        <li><span class="cn">诚信</span><span class="en">INTEGRITY</span></li>
-        <li><span class="cn">独立</span><span class="en">INDEPENDENCE</span></li>
-        <li><span class="cn">专业</span><span class="en">PROFESSIONALISM</span></li>
-        <li><span class="cn">客观</span><span class="en">OBJECTIVITY</span></li>
-        <li><span class="cn">创新</span><span class="en">INNOVATION</span></li>
-        <li><span class="cn">国际视野</span><span class="en">GLOBAL PERSPECTIVE</span></li>
-      </ul>
+
+    <div class="culture-vm reveal">
+      <div class="vm-block">
+        <div class="eyebrow" style="margin-bottom:10px;">VISION</div>
+        <h3>企业愿景</h3>
+        <p>成为行业领先、具有国际影响力的独立研究机构，为全球企业及资本市场提供值得信赖的专业研究服务。</p>
+      </div>
+      <div class="vm-block">
+        <div class="eyebrow" style="margin-bottom:10px;">MISSION</div>
+        <h3>企业使命</h3>
+        <p>以独立研究支持企业决策，以专业分析促进资本市场健康发展。</p>
+      </div>
+    </div>
+
+    <div class="eyebrow reveal">CORE VALUES</div>
+    <h3 style="font-size:20px; margin-bottom:26px;" class="reveal">企业价值观 — 诚信、独立、专业、客观、创新、视野</h3>
+
+    <div class="value-grid reveal">
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">诚信</span><span class="vc-sub">INTEGRITY · 立身之本</span></div>
+        <p>以诚待人，以信立业。诚信是科德博最根本的行为底线，也是我们与客户建立长期信任关系的起点。</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">独立</span><span class="vc-sub">INDEPENDENCE · 价值之锚</span></div>
+        <p>不受不当影响，不为利益妥协。独立是科德博最核心的价值主张，也是每一份报告结论可信的根源。</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">专业</span><span class="vc-sub">PROFESSIONALISM · 立身之器</span></div>
+        <p>以严谨方法支撑可靠结论，以深厚积累赋能高效服务。专业是科德博对客户价值的直接体现。</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">客观</span><span class="vc-sub">OBJECTIVITY · 判断之尺</span></div>
+        <p>尊重事实，超越立场。科德博以客观为标尺，确保每一份分析经得起第三方检验。</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">创新</span><span class="vc-sub">INNOVATION · 前进之翼</span></div>
+        <p>在坚守方法论的同时拥抱变化，以创新思维应对复杂问题。创新是科德博持续进化的能力。</p>
+      </div>
+      <div class="value-card">
+        <div class="vc-head"><span class="vc-cn">视野</span><span class="vc-sub">GLOBAL PERSPECTIVE · 远见之源</span></div>
+        <p>立足香港，放眼全球。视野决定了我们洞察的广度与建议的前瞻性。</p>
+      </div>
+    </div>
+
+    <div class="commitment-block reveal">
+      <h3>文化即承诺</h3>
+      <p>愿景指引方向，使命驱动行动，价值观塑造品格。科德博的文化不是挂在墙上的标语，而是每一位团队成员在每一天的工作中践行的准则。我们对客户的每一项承诺，都从研究的第一页开始，在报告的每一个数据点中落笔，在与客户的每一次沟通中兑现。</p>
     </div>
   </div>
 </section>
@@ -608,10 +780,12 @@
     <div class="reveal">
       <div class="eyebrow">CONTACT US</div>
       <h2>联系我们</h2>
-      <p>如需了解市场研究、行业分析、企业估值、财务分析或资本市场研究相关服务，欢迎与我们联系。</p>
-      <div class="contact-note">注：具体邮箱、电话及办公地址等联系方式待补充完整后加入本页面。</div>
+      <p>如需了解行业研究、企业估值、ESG 服务、商业尽调或募投可研相关服务，欢迎与我们联系。</p>
+    
     </div>
     <div class="contact-card reveal">
+      <div class="row"><span>邮箱</span><span>info@hkcredible.com</span></div>
+      
       <div class="row"><span>公司中文名称</span><span>香港科德博市場研究股份有限公司</span></div>
       <div class="row"><span>Company Name</span><span>HK Credible Market Research Co., Limited</span></div>
       <div class="row"><span>注册地</span><span>中国香港特别行政区</span></div>
